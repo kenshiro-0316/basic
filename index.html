@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+  </head>
+  <body>
+    <h1>ベーシック認証テスト</h1>
+    <script type="text/javascript">
+    function first() {
+       var user = prompt("ユーザー名を入力してください");
+       if (user==false || user== null) {
+         alert("ユーザー名を入力してください")
+         first();
+       }else{
+         document.title=user;
+       }
+       var pass=prompt("Welcom "+user+"様パスワードを入力してください")
+       var password="kendea1221"
+       if (pass==password) {
+         alert("ログインできました。")
+       }else{
+         alert("ログインできません")
+         first();
+       }
+    }
+    window.onload=first();
+  </script>
+  </body>
+
+</html>
